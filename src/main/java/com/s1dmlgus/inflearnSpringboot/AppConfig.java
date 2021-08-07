@@ -2,6 +2,7 @@ package com.s1dmlgus.inflearnSpringboot;
 
 import com.s1dmlgus.inflearnSpringboot.domain.discount.DiscountPolicy;
 import com.s1dmlgus.inflearnSpringboot.domain.discount.FixDiscountPolicy;
+import com.s1dmlgus.inflearnSpringboot.domain.discount.RateDisountPolicy;
 import com.s1dmlgus.inflearnSpringboot.domain.member.MemoryMemberRepository;
 import com.s1dmlgus.inflearnSpringboot.domain.order.OrderService;
 import com.s1dmlgus.inflearnSpringboot.domain.order.OrderServiceImpl;
@@ -30,7 +31,8 @@ public class AppConfig {
 
     // 할인 정책 역할
     public DiscountPolicy discountPolicy(){
-        return new FixDiscountPolicy();
+        //return new FixDiscountPolicy();
+        return new RateDisountPolicy();
     }
 
 

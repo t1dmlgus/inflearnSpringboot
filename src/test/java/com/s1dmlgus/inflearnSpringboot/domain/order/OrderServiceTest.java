@@ -34,10 +34,10 @@ class OrderServiceTest {
         memberService.join(memberA);
 
         //when
-        Order order = orderService.createOrder(memberId, "itemA", 10000);
+        Order order = orderService.createOrder(memberId, "itemA", 20000);
 
         //then
-        assertThat(order.getDiscountPrice()).isEqualTo(1000);
+        assertThat(order.getDiscountPrice()).isEqualTo(2000);
     }
 
 }
